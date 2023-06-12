@@ -7,7 +7,18 @@
 */
 
 function isPalindrome(str) {
+  var lp = 0;
+  var rp = str.length - 1;
+  while (lp < rp) {
+    if (str[lp] !== str[rp]) {
+      return false;
+    }
+    lp++;
+    rp--;
+  }
   return true;
 }
+
+console.log(isPalindrome("mnavan"));
 
 module.exports = isPalindrome;
